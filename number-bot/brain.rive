@@ -1,0 +1,50 @@
+! version = 2.0
+
+! var num = 522
+
+
++ hello bot
+- Hello human.
+
++ my name is *
+- <set name=<formal>>Nice to meet you, <get name>.
+
++ (what is my name|who am i)
+- You're <get name>, right?
+
++ *
+- I don't have a reply for that.
+- Try asking that a different way.
+
++ how are you today
+- I am good! I would like to chat about your favorite things. Start with your favorite food. 
+
++ my favorite food is *
+- <set food=<star1>><get food> is so yummy! Now your favorite color.
+
++ my favorite color is *
+- <set color=<star>>Oh, I love <get color> too! Next your favorite animal.
+
++ my favorite animal is *
+- <set animal=<star1>>Wow! <get animal> is my favorite too! What about your favorite number?
+
++ #
+* <star> > <bot num> => Pick a lower number 
+* <star> > <bot num> => Almost there! 
+* <star> < <bot num> => Pick a higher number
+* <star> == <bot num> => You got it!
+- I believe in you!
+
++ my favorite number is *
+- <set number =<star>>Oh, <get number> is a great number!
+- Guess a number between 0 and 1000
+
+
+- Great guess! I like the number <star1>
+
++ * number * 
+- Guess a number between 0 and 600
+
+// copy your bot here
++ * 
+- I am a bot
